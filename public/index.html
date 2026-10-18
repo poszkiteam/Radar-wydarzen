@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#34483b">
+  <title>Radar Wydarzeń</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand-mark">✳</div>
+    <div>
+      <p class="eyebrow">MNIEJ SCROLLOWANIA, WIĘCEJ ŻYCIA</p>
+      <h1>Radar Wydarzeń</h1>
+      <p class="subtitle">Ciekawe rzeczy w Twojej okolicy — w jednym miejscu.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro panel">
+      <div>
+        <p class="eyebrow">TWÓJ CODZIENNY ODKRYWCA</p>
+        <h2>Co warto zrobić?</h2>
+        <p class="muted">Wydarzenia z Zielonej Góry, Wrocławia, Poznania i okolic. Kliknij źródło, żeby sprawdzić szczegóły i zapisy.</p>
+      </div>
+      <button id="refresh" class="button primary">↻ Odśwież wyniki</button>
+    </section>
+
+    <section class="filters panel">
+      <label>Miasto
+        <select id="city">
+          <option value="Wszystkie">Wszystkie miasta</option>
+          <option>Zielona Góra</option>
+          <option>Wrocław</option>
+          <option>Poznań</option>
+        </select>
+      </label>
+      <label>Kategoria
+        <select id="category">
+          <option value="Wszystkie">Wszystkie kategorie</option>
+          <option>Florystyka i rękodzieło</option>
+          <option>Fotografia i sztuka</option>
+          <option>Koncerty i jazz</option>
+          <option>Grafika i ilustracja</option>
+          <option>Ceramika i warsztaty DIY</option>
+          <option>Spotkania, wystawy i wernisaże</option>
+          <option>Spacery fotograficzne i natura</option>
+          <option>Inne ciekawe wydarzenia</option>
+        </select>
+      </label>
+      <label class="search-label">Szukaj
+        <input id="search" type="search" placeholder="np. ceramika, jazz, wernisaż">
+      </label>
+    </section>
+
+    <section class="summary-row">
+      <div><strong id="count">—</strong><span> propozycji</span></div>
+      <div class="muted" id="updated">Ładowanie danych…</div>
+    </section>
+
+    <section id="status" class="status" aria-live="polite">Łączę się z radarem…</section>
+    <section id="events" class="events" aria-live="polite"></section>
+
+    <section class="note panel">
+      <h3>Jak działa radar?</h3>
+      <p>Automatyczne wyszukiwanie uruchamia się codziennie. Wyniki pochodzą z wyszukiwarki internetowej i są tropami do sprawdzenia, a nie gwarancją dostępnych miejsc. Zawsze sprawdź datę, cenę i informacje u organizatora.</p>
+      <p class="muted small">Wersja startowa nie ma jeszcze pełnej integracji z Messengerem ani trwałej synchronizacji zapisanych wydarzeń między urządzeniami.</p>
+    </section>
+  </main>
+  <footer>Radar Wydarzeń · wersja testowa</footer>
+  <script src="/app.js" defer></script>
+</body>
+</html>
